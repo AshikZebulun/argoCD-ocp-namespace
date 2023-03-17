@@ -3,11 +3,11 @@ kind: Project
 metadata:
   name: monday
   labels:
-	day: monday
-	environment: dev
-	name: monday
-	cluster: local
+    day: monday
+    environment: dev
+    name: monday
+    cluster: local
   annotations:
-	contact: Ashik Zebulun
-	openshift.io/description: To test Argo CD
-	openshift.io/display-name: A namespace called Monday
+    contact: Ashik Zebulun
+    openshift.io/description: To test Argo CD
+    openshift.io/display-name: A namespace called Monday
