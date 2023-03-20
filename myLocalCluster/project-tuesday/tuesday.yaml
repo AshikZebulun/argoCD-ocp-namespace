@@ -22,6 +22,8 @@ kind: ResourceQuota
 metadata:
   name: tuesday
   namespace: tuesday
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   hard:
     cpu: "1"
@@ -36,6 +38,8 @@ kind: LimitRange
 metadata:
   name: tuesday
   namespace: tuesday
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   limits:
   - type: Pod
@@ -64,6 +68,8 @@ kind: Role
 metadata:
   name: tuesday-role
   namespace: tuesday
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
 rules:
 - apiGroups: [""]
   resources: ["pods"]
@@ -77,6 +83,8 @@ kind: RoleBinding
 metadata:
   name: tuesday-rolebinding
   namespace: tuesday
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
 subjects:
 - kind: User
   name: developer
