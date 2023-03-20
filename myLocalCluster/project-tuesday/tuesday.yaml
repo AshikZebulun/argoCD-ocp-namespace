@@ -13,6 +13,7 @@ metadata:
     contact: Ashik Zebulun
     openshift.io/description: To test Argo CD
     openshift.io/display-name: A namespace called Monday
+    argocd.argoproj.io/sync-wave: "1"
 
 ---
 
