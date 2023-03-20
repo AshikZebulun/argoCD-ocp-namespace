@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: monday-rolebinding
+  namespace: monday
+subjects:
+- kind: User
+  name: developer
+roleRef:
+  kind: Role
+  name: monday-role
+  apiGroup: rbac.authorization.k8s.io
