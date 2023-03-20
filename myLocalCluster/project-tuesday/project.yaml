@@ -1,0 +1,14 @@
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  name: tuesday
+  labels:
+    day: tuesday
+    environment: dev
+    name: tuesday
+    cluster: local
+    argocd.argoproj.io/managed-by: openshift-gitops
+  annotations:
+    contact: Ashik Zebulun
+    openshift.io/description: To test Argo CD
+    openshift.io/display-name: A namespace called Monday
