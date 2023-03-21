@@ -3,8 +3,6 @@ kind: RoleBinding
 metadata:
   name: monday-rolebinding
   namespace: monday
-  annotations:
-  argocd.io/sync-wave: "4"
 subjects:
 - kind: User
   name: developer
