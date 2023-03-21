@@ -1,7 +1,7 @@
 apiVersion: project.openshift.io/v1
 kind: Project
 metadata:
-  name: monday
+  name: monday-namespace
   labels:
     day: monday
     environment: dev
@@ -19,8 +19,10 @@ metadata:
 apiVersion: v1
 kind: ResourceQuota
 metadata:
-  name: monday
+  name: monday-quota
   namespace: monday
+  labels:
+    depends-on: monday-namespace
 spec:
   hard:
     cpu: "1"
@@ -33,8 +35,10 @@ spec:
 apiVersion: v1
 kind: LimitRange
 metadata:
-  name: monday
+  name: monday-limit
   namespace: monday
+  labels:
+    depends-on: monday-namespace
 spec:
   limits:
   - type: Pod
@@ -63,6 +67,8 @@ kind: Role
 metadata:
   name: monday-role
   namespace: monday
+  labels:
+    depends-on: monday-namespace
 rules:
 - apiGroups: [""]
   resources: ["pods"]
@@ -76,6 +82,8 @@ kind: RoleBinding
 metadata:
   name: monday-rolebinding
   namespace: monday
+  labels:
+    depends-on: monday-namespace
 subjects:
 - kind: User
   name: developer
