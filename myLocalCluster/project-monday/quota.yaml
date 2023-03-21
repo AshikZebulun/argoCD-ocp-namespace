@@ -3,8 +3,6 @@ kind: ResourceQuota
 metadata:
   name: monday
   namespace: monday
-  annotations:
-  argocd.io/sync-wave: "2"
 spec:
   hard:
     cpu: "1"
