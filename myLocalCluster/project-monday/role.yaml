@@ -3,8 +3,6 @@ kind: Role
 metadata:
   name: monday-role
   namespace: monday
-  annotations:
-  argocd.io/sync-wave: "3"
 rules:
 - apiGroups: [""]
   resources: ["pods"]
