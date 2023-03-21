@@ -3,8 +3,6 @@ kind: LimitRange
 metadata:
   name: monday
   namespace: monday
-  annotations:
-  argocd.io/sync-wave: "2"
 spec:
   limits:
   - type: Pod
