@@ -1,0 +1,11 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: thursday-role
+  namespace: thursday
+  annotations:
+    argocd.argoproj.io/sync-options: "Prune=false"
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["get", "list", "watch"]

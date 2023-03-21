@@ -1,0 +1,14 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: thursday-rolebinding
+  namespace: thursday
+  annotations:
+    argocd.argoproj.io/sync-options: "Prune=false"
+subjects:
+- kind: User
+  name: developer
+roleRef:
+  kind: Role
+  name: thursday-role
+  apiGroup: rbac.authorization.k8s.io

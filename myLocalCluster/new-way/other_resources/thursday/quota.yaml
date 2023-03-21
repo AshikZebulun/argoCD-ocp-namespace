@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: thursday
+  namespace: thursday
+  annotations:
+    argocd.argoproj.io/sync-options: "Prune=false"
+spec:
+  hard:
+    cpu: "1"
+    memory: 1Gi
+    pods: "5"
