@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\myLocalCluster",
-    "\\myLocalCluster\\project-monday"
+    "\\myLocalCluster\\configmap",
+    "\\myLocalCluster\\project-monday",
+    "\\myLocalCluster\\project-tuesday"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\myLocalCluster\\project-monday\\kustomization.yaml",
   "PreviewInSolutionExplorer": false
 }
